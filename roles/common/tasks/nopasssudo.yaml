@@ -1,0 +1,17 @@
+- name: Passwordless group sudo
+  group:
+    name: nopasssudo
+    state: present
+  become: true
+
+- name: Allow 'nopasssudo' group to have passwordless sudo
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%nopasssudo'
+    line: '%nopasssudo ALL=(ALL) NOPASSWD: ALL'
+  become: true
+
+- name: Add sudoers users to nopasssudo group
+  user: name=dario groups=nopasssudo append=yes state=present createhome=yes
+  become: true

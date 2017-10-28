@@ -1,0 +1,10 @@
+- name: Various useful libraries
+  apt:
+    name: ""
+  with_items:
+    - python-dev
+    - curl
+    - aptitude
+    - htop
+    - vim
+  become: yes

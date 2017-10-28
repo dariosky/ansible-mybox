@@ -1,0 +1,4 @@
+username: dario
+
+chrome_apt_file: /etc/apt/sources.list.d/google-chrome.list
+chrome_stage: beta

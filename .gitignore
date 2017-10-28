@@ -1,0 +1,6 @@
+### Python related
+/.idea
+.python-version
+
+### Ansible template
+*.retry

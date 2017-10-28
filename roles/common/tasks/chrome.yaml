@@ -1,0 +1,22 @@
+- name: Does the Google apt file exist?
+  stat:
+    path: "{{chrome_apt_file}}"
+  register: google_apt
+
+- name: Add Google Chrome key
+  shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+  when: google_apt.stat.exists == False
+  become: True
+
+- name: Add Google Chrome repo
+  copy: content="deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" dest={{chrome_apt_file}} owner=root group=root mode=644
+  when: google_apt.stat.exists == False
+  become: True
+
+- name: Install Google Chrome {{chrome_stage}}
+  apt:
+    name: ""
+  with_items:
+    - google-chrome-{{chrome_stage}}
+  update_cache: yes
+  become: yes
