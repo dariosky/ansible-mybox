@@ -18,5 +18,4 @@
     name: ""
   with_items:
     - google-chrome-{{chrome_stage}}
-  update_cache: yes
   become: yes

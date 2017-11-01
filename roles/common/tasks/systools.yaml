@@ -7,4 +7,6 @@
     - aptitude
     - htop
     - vim
+    - screen
+    - apt-transport-https
   become: yes
