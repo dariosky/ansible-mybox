@@ -1,4 +1,8 @@
 - import_tasks: systools.yaml
+- import_tasks: devtools.yaml
 - import_tasks: nopasssudo.yaml
 - import_tasks: chrome.yaml
 - import_tasks: sublime.yaml
+- import_tasks: slack.yaml
+- import_tasks: networking.yaml
+

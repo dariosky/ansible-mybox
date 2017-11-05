@@ -1,0 +1,12 @@
+- name: Various useful libraries
+  apt:
+    name: ""
+  with_items:
+    - openssh-server
+    - redis-server
+    - redis-tools
+    - postgresql
+    - postgresql-contrib
+    - phppgadmin
+    - pgadmin3
+  become: yes

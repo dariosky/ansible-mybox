@@ -2,11 +2,18 @@
   apt:
     name: ""
   with_items:
-    - python-dev
     - curl
     - aptitude
     - htop
     - vim
     - screen
     - apt-transport-https
+    - silversearcher-ag
+    - keepass2
+    - xdotool
+    - gimp
+    - vlc
+    - gparted
+    - inkscape
+    - meld
   become: yes
