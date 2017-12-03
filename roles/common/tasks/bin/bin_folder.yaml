@@ -1,0 +1,10 @@
+- name: Does ~/bin folder exist?
+  stat:
+    path: ~/bin
+  tags: development
+  register: bin
+
+- name: Create bin folder
+  file: path=~/bin state=directory
+  tags: development
+  when: bin.stat.exists == False

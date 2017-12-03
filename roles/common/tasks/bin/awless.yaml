@@ -1,0 +1,12 @@
+- name: Does awless exist?
+  stat:
+    path: ~/bin/awless
+  tags: development
+  register: awless
+
+- name: Install awless
+  shell: curl https://raw.githubusercontent.com/wallix/awless/master/getawless.sh | bash
+  args:
+      chdir: ~/bin/
+  tags: development
+  when: awless.stat.exists == False

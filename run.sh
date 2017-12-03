@@ -1,1 +1,2 @@
-ansible-playbook setup.yaml -i HOSTS
+#!/usr/bin/env bash
+ansible-playbook setup.yaml -i HOSTS $*

@@ -1,0 +1,10 @@
+- name: Does ngrok exist?
+  stat:
+    path: ~/bin/ngrok
+  tags: development
+  register: ngrok
+
+- name: Install ngrok
+  shell: wget -q -O - https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip | zcat > ~/bin/ngrok && chmod +x ~/bin/ngrok
+  tags: development
+  when: ngrok.stat.exists == False

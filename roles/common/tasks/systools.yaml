@@ -16,4 +16,5 @@
     - gparted
     - inkscape
     - meld
+    - ncdu
   become: yes
