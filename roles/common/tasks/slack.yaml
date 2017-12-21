@@ -1,5 +1,24 @@
+- name: Slack GPG key
+  apt_key:
+    url: "https://packagecloud.io/slacktechnologies/slack/gpgkey"
+    state: present
+  become: true
+
+- name: Slack repository
+  apt_repository:
+    repo: "deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
+    mode: 0644
+    state: present
+  become: true
+
+- name: Update the apt cache
+  apt:
+    cache_valid_time: 3600
+    update_cache: yes
+  become: true
+
 - name: Install slack
   apt:
-    deb: https://downloads.slack-edge.com/linux_releases/slack-desktop-2.9.0-amd64.deb
+    pkg: "slack-desktop"
     state: present
   become: true

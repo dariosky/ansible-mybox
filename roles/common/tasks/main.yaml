@@ -4,6 +4,8 @@
 - import_tasks: chrome.yaml
 - import_tasks: sublime.yaml
 - import_tasks: slack.yaml
+  tags: [chat]
 - import_tasks: networking.yaml
 - import_tasks: bin/main.yaml
+- import_tasks: multimedia.yaml
 
