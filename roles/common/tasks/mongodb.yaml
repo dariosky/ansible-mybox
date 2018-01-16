@@ -1,0 +1,22 @@
+- name: Does the Google apt file exist?
+  stat:
+    path: /etc/apt/sources.list.d/mongodb-org-3.6.list
+  register: mongo_apt
+
+- name: Add Mongo key by id from a keyserver
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+  become: yes
+
+- name: Add Mongo repo
+  copy: content="deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" dest=/etc/apt/sources.list.d/mongodb-org-3.6.list owner=root group=root mode=644
+  when: mongo_apt.stat.exists == False
+  become: True
+
+- name: Install MongoDB
+  apt:
+    name: ""
+  with_items:
+    - mongodb-org
+  become: yes

@@ -11,10 +11,8 @@
     - silversearcher-ag
     - keepass2
     - xdotool
-    - gimp
     - vlc
     - gparted
-    - inkscape
     - meld
     - ncdu
   become: yes

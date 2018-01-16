@@ -1,4 +1,3 @@
 - name: Spotify (snap package)
   shell:  snap install spotify
-  tags: multimedia
   become: True

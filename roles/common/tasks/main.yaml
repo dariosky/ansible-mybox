@@ -7,5 +7,9 @@
   tags: [chat]
 - import_tasks: networking.yaml
 - import_tasks: bin/main.yaml
-- import_tasks: multimedia.yaml
-
+- import_tasks: design.yaml
+  tags: [multimedia, design]
+- import_tasks: audio.yaml
+  tags: [multimedia audio]
+- import_tasks: mongodb.yaml
+  tags: [db]
