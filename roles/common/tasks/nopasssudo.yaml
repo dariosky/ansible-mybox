@@ -13,5 +13,5 @@
   become: true
 
 - name: Add sudoers users to nopasssudo group
-  user: name=dario groups=nopasssudo append=yes state=present createhome=yes
+  user: name={{username}} groups=nopasssudo append=yes state=present createhome=yes
   become: true

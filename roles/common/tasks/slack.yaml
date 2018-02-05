@@ -1,3 +1,0 @@
-- name: Slack (snap package)
-  shell:  snap install slack --classic
-  become: True

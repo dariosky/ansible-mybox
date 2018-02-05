@@ -1,0 +1,7 @@
+- name: Slack (snap package)
+  shell:  snap install slack --classic
+  become: true
+
+- name: Skype (snap package)
+  shell:  snap install skype --classic
+  become: true
