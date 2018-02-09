@@ -1,4 +1,4 @@
-username: dario
+username: "{{ ansible_user_id }}"
 
 chrome_apt_file: /etc/apt/sources.list.d/google-chrome.list
 chrome_stage: beta
