@@ -1,0 +1,41 @@
+- name: Docker requisites
+  apt:
+    name: ""
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+  become: yes
+
+- name: Remove "old" docker packages
+  apt:
+    name: ""
+    state: absent
+  with_items:
+    - docker
+    - docker-engine
+    - docker.io
+  become: true
+
+- name: Install Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  become: true
+
+- name: Add repositories into sources list
+  apt_repository:
+    repo: deb [arch=amd64] {{ item.repo }} {{ ansible_distribution_release | lower }} {{ item.add }}
+    state: present
+    filename: "{{ item.file }}"
+  with_items:
+    - repo: https://download.docker.com/linux/ubuntu
+      add: stable
+      file: docker
+  become: true
+
+- name: Install Docker CE
+  apt:
+    name: "docker-ce"
+  become: yes
