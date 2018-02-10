@@ -7,6 +7,44 @@ after the installation of my box.
 This will be a playground and a perennial
 work in progress, but feedback is appreciated.
 
+### Installed packages
+
+* various Linux system tools
+* various development libraries and tools
+* Google Chrome beta
+* Setup no-sudo password for current user
+* Design tools: Gimp, Inkscape, Gravit-designer
+* DB: MongoDB, postgresql, Redis
+* Social: Slack, Skype
+* Network: OpenSSH server
+* Docker
+* Audio: Spotify desktop app
+* Sublime Text 3
+
+### Usage
+
+* You need Python to run ansible
+* Install the requirements, via pip:
+
+		pip install -r requirements.txt
+* Run Ansible:
+
+		./run.sh
+		
+### Notes
+You can eventually run a subset of tasks passing 
+tags option to run.sh, for example:
+  
+  	/run.sh --tags social
+  
+  Available tags:
+  
+  _social, multimedia, design, audio, db, docker, development_
+
+Ansible will take care of changes, so it is safe to run the script
+as many time as you like.
+
+
 ### References:
 
 *	http://docs.ansible.com/ansible/latest/index.html
