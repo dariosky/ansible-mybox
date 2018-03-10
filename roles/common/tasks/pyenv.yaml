@@ -1,0 +1,9 @@
+- name: Is pyenv installed?
+  stat:
+    path: "~/.pyenv"
+  register: pyenv
+
+- name: Install pyenv
+  shell: curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+  when: pyenv.stat.exists == False
+  become: no

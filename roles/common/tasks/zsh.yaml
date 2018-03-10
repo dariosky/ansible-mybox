@@ -1,0 +1,16 @@
+- name: Installing Zsh
+  apt:
+    name: ""
+  with_items:
+    - zsh
+  become: yes
+
+- name: Is oh-my-zsh installed?
+  stat:
+    path: "~/.oh-my-zsh"
+  register: oh_my_zsh
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  when: oh_my_zsh.stat.exists == False
+  become: no

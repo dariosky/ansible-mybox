@@ -27,3 +27,5 @@
     - optipng
 
   become: yes
+
+- import_tasks: pyenv.yaml

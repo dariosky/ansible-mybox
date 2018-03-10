@@ -1,5 +1,6 @@
 - import_tasks: systools.yaml
 - import_tasks: devtools.yaml
+  tags: [dev]
 - import_tasks: nopasssudo.yaml
 - import_tasks: chrome.yaml
 - import_tasks: sublime.yaml
@@ -15,3 +16,5 @@
   tags: [db]
 - import_tasks: docker.yaml
   tags: [docker]
+- import_tasks: zsh.yaml
+  tags: [shell]
