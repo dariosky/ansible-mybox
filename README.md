@@ -39,7 +39,8 @@ tags option to run.sh, for example:
   
   Available tags:
   
-  _social, multimedia, design, audio, db, docker, development_
+  _social, multimedia, design, audio, db, docker, development,
+  python, ruby_
 
 Ansible will take care of changes, so it is safe to run the script
 as many time as you like.

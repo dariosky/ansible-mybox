@@ -29,3 +29,7 @@
   become: yes
 
 - import_tasks: pyenv.yaml
+  tags: [python]
+
+- import_tasks: ruby.yaml
+  tags: [ruby]

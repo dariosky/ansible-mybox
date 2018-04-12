@@ -1,0 +1,39 @@
+- name: Is RVM installed?
+  stat:
+    path: "~/.rvm"
+  register: rvm
+
+- name: Install RVM
+  shell: |
+    curl -sSL https://get.rvm.io | bash
+    source ~/.rvm/scripts/rvm
+    rvm requirements
+    rvm install ruby --latest
+    rvm --default use ruby --latest
+
+    gem install sass -v 3.4.24
+    gem install scss_lint
+    exit 0
+  when: rvm.stat.exists == False
+  become: no
+
+
+- name: is Sass installed?
+  stat:
+    path: "~/.rvm/wrappers/default/sass"
+  register: sass
+
+- name: Install Sass 3.4.24
+  when: sass.stat.exists == False
+  shell: gem install sass -v 3.4.24
+  become: no
+
+- name: is Scss_lint installed?
+  stat:
+    path: "~/.rvm/wrappers/default/scss_lint"
+  register: sass
+
+- name: Install Scss_lint
+  when: sass.stat.exists == False
+  shell: gem install scss_lint
+  become: no
