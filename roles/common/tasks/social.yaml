@@ -5,3 +5,7 @@
 - name: Skype (snap package)
   shell:  snap install skype --classic
   become: true
+
+- name: Telegram (snap package)
+  shell: snap install telegram-sergiusens
+  become: true
