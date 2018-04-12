@@ -33,3 +33,6 @@
 
 - import_tasks: ruby.yaml
   tags: [ruby]
+
+- import_tasks: node.yaml
+  tags: [node]

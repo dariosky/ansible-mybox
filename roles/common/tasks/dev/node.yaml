@@ -1,0 +1,20 @@
+- name: Is global node installed?
+  stat:
+    path: "/usr/local/bin/node"
+  register: globalnode
+
+- fail:
+    msg: "Global node is installed please 'sudo apt remove nodejs'."
+  when: globalnode.stat.exists == True
+
+# N ***
+
+- name: Is N installed?
+  stat:
+    path: "~/n/bin/n"
+  register: n
+
+- name: Install N - node LTS
+  shell: curl -L https://git.io/n-install | bash -s -- lts
+  when: n.stat.exists == False
+  become: no

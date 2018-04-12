@@ -1,5 +1,5 @@
 - import_tasks: systools.yaml
-- import_tasks: devtools.yaml
+- import_tasks: dev/devtools.yaml
   tags: [dev]
 - import_tasks: nopasssudo.yaml
 - import_tasks: chrome.yaml

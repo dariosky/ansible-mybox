@@ -28,12 +28,12 @@
   shell: gem install sass -v 3.4.24
   become: no
 
-- name: is Scss_lint installed?
+- name: is Scss-lint installed?
   stat:
-    path: "~/.rvm/wrappers/default/scss_lint"
-  register: sass
+    path: "~/.rvm/wrappers/default/scss-lint"
+  register: scss_lint
 
-- name: Install Scss_lint
-  when: sass.stat.exists == False
+- name: Install Scss-lint
+  when: scss_lint.stat.exists == False
   shell: gem install scss_lint
   become: no
