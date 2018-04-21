@@ -7,6 +7,6 @@
     - redis-tools
     - postgresql
     - postgresql-contrib
-    - phppgadmin
     - pgadmin3
+    - nginx
   become: yes
