@@ -9,4 +9,6 @@
     - postgresql-contrib
     - pgadmin3
     - nginx
+    - nethogs
+    - apache2-utils
   become: yes
