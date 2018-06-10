@@ -16,11 +16,7 @@
   become: true
 
 - name: Install packages
-  apt:
-    state: installed
-    pkg: "{{ item }}"
-    update_cache: yes
-    cache_valid_time: 3600
+  apt: name={{item}} state=installed
   with_items:
     - sublime-text
   become: true

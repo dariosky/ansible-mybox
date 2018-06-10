@@ -3,8 +3,7 @@
   become: True
 
 - name: Design tool packages
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
     - gimp
     - inkscape

@@ -1,6 +1,5 @@
-- name: Various useful libraries
-  apt:
-    name: ""
+- name: Various network
+  apt: name={{item}} state=installed
   with_items:
     - openssh-server
     - redis-server
@@ -11,4 +10,5 @@
     - nginx
     - nethogs
     - apache2-utils
+    - curl
   become: yes

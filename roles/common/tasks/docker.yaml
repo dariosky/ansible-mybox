@@ -1,6 +1,5 @@
 - name: Docker requisites
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
     - apt-transport-https
     - ca-certificates
@@ -9,9 +8,7 @@
   become: yes
 
 - name: Remove "old" docker packages
-  apt:
-    name: ""
-    state: absent
+  apt: name={{item}} state=absent
   with_items:
     - docker
     - docker-engine

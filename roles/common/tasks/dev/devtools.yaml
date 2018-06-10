@@ -1,6 +1,5 @@
 - name: Development libraries
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
     - libc6:i386
     - libncurses5:i386

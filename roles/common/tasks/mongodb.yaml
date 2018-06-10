@@ -15,8 +15,7 @@
   become: True
 
 - name: Install MongoDB
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
     - mongodb-org
   become: yes

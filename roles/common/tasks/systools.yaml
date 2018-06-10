@@ -1,8 +1,6 @@
 - name: Various useful libraries
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
-    - curl
     - aptitude
     - htop
     - vim

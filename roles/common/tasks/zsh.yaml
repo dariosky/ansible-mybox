@@ -1,6 +1,5 @@
 - name: Installing Zsh
-  apt:
-    name: ""
+  apt: name={{item}} state=installed
   with_items:
     - zsh
   become: yes
