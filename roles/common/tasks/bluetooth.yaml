@@ -1,0 +1,9 @@
+- name: Bluetooth updated repo
+  apt_repository:
+    repo: 'ppa:bluetooth/bluez'
+    state: present
+
+- name: Install Bluez
+  apt:
+    name: "bluez"
+  become: yes

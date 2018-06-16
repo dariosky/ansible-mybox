@@ -19,3 +19,5 @@
   tags: [docker]
 - import_tasks: zsh.yaml
   tags: [shell]
+- import_tasks: bluetooth.yaml
+  tags: [system]
