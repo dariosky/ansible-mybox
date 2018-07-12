@@ -10,10 +10,6 @@
     rvm requirements
     rvm install ruby --latest
     rvm --default use ruby --latest
-
-    gem install sass -v 3.4.24
-    gem install scss_lint
-    exit 0
   when: rvm.stat.exists == False
   become: no
 
@@ -23,9 +19,9 @@
     path: "~/.rvm/wrappers/default/sass"
   register: sass
 
-- name: Install Sass 3.4.24
+- name: Install Sass 3.5.6
   when: sass.stat.exists == False
-  shell: gem install sass -v 3.4.24
+  shell: gem install sass -v 3.5.6
   become: no
 
 - name: is Scss-lint installed?
