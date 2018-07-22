@@ -1,26 +1,29 @@
 - name: Development libraries
   apt: name={{item}} state=installed
   with_items:
-    - libc6:i386
-    - libncurses5:i386
-    - libstdc++6:i386
-    - lib32z1
-    - libbz2-1.0:i386
     - build-essential
-    - libjpeg-dev
-    - libtiff-dev
-    - libfreetype6-dev
     - git
-    - libpq-dev
+
     - python-dev
     - python-virtualenv
     - python-setuptools
     - ipython
+
+    - libjpeg-dev
+    - libtiff-dev
+    - libfreetype6-dev
+    - libpq-dev
+
     - libbz2-dev
     - libxml2-dev
     - libxslt1-dev
     - libxslt-dev
+    - lib32z1
     - lib32z1-dev
+    - lib32ncurses5
+    - libbz2-1.0:i386
+    - libc6:i386
+    - libstdc++6:i386
 
     - zopfli
     - optipng
@@ -35,3 +38,6 @@
 
 - import_tasks: node.yaml
   tags: [node]
+
+- import_tasks: vscode.yaml
+  tags: [editor]
