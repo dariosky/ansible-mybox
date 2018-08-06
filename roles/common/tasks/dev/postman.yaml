@@ -1,0 +1,3 @@
+- name: Postman (snap package)
+  shell:  snap install postman
+  become: True
