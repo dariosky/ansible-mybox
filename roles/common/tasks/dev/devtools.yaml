@@ -25,6 +25,8 @@
     - libc6:i386
     - libstdc++6:i386
 
+    - fonts-firacode
+
     - zopfli
     - optipng
 
