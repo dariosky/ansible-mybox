@@ -24,12 +24,20 @@
     - libbz2-1.0:i386
     - libc6:i386
     - libstdc++6:i386
+    - libsqlite3-dev
+    - libaio1
 
     - fonts-firacode
 
     - zopfli
     - optipng
+  become: yes
 
+- name: Development fonts (optional)
+  apt: name={{item}} state=installed
+  ignore_errors: True
+  with_items:
+    - fonts-firacode
   become: yes
 
 - import_tasks: pyenv.yaml
