@@ -21,3 +21,5 @@
   tags: [shell]
 - import_tasks: bluetooth.yaml
   tags: [system]
+- import_tasks: various.yaml
+  tags: [various]

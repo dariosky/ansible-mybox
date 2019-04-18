@@ -1,0 +1,10 @@
+- name: Various useful apps
+  apt: name={{item}} state=installed
+  with_items:
+    - terminator
+  become: yes
+
+- name: Variety updated repo
+  apt_repository:
+    repo: 'ppa:peterlevi/ppa'
+    state: present
