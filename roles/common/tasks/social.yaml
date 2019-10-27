@@ -7,5 +7,5 @@
   become: true
 
 - name: Telegram (snap package)
-  shell: snap install telegram-sergiusens
+  shell: snap install telegram-desktop
   become: true
