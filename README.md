@@ -37,6 +37,10 @@ is installing Ansible with APT:
 
 		./run.sh
 		
+At the beginning, you probably aren't in the password-less, in that case
+if you get a `sudo: a password is required` you can type your user password
+here running `./run.sh -K`
+		
 ### Notes
 You can eventually run a subset of tasks passing 
 tags option to run.sh, for example:

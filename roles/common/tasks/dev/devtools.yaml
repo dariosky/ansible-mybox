@@ -5,9 +5,9 @@
     - git
 
     - python-dev
-    - python-virtualenv
-    - python-setuptools
-    - ipython
+    - python3-virtualenv
+    - python3-setuptools
+    - ipython3
 
     - libjpeg-dev
     - libtiff-dev
