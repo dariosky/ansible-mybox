@@ -1,6 +1,6 @@
-- name: Gravit-designer (snap package)
-  shell:  snap install gravit-designer
-  become: True
+#- name: Gravit-designer (snap package)
+#  shell:  snap install gravit-designer
+#  become: True
 
 - name: Design tool packages
   apt: name={{item}} state=installed

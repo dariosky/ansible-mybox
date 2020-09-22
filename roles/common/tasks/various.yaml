@@ -6,26 +6,27 @@
     - gnome-tweak-tool
   become: yes
 
-- name: Variety updated repo
-  apt_repository:
-    repo: 'ppa:peterlevi/ppa'
-    state: present
+#- name: Variety updated repo
+#  apt_repository:
+#    repo: 'ppa:peterlevi/ppa'
+#    state: present
+#  become: yes
 
-- name: Typora keyserver
-  apt_key:
-    keyserver: hkp://keyserver.ubuntu.com:80
-    id: BA300B7755AFCFAE
-  become: yes
-
-- name: Typora repo
-  apt_repository:
-    repo: 'deb https://typora.io/linux ./'
-    state: present
-    update_cache: yes
-  become: yes
-
-- name: Typora package
-  apt: name={{item}} state=installed
-  with_items:
-    - typora
-  become: yes
+#- name: Typora keyserver
+#  apt_key:
+#    keyserver: hkp://keyserver.ubuntu.com:80
+#    id: BA300B7755AFCFAE
+#  become: yes
+#
+#- name: Typora repo
+#  apt_repository:
+#    repo: 'deb https://typora.io/linux ./'
+#    state: present
+#    update_cache: yes
+#  become: yes
+#
+#- name: Typora package
+#  apt: name={{item}} state=installed
+#  with_items:
+#    - typora
+#  become: yes

@@ -1,16 +1,17 @@
 - name: Various useful libraries
-  apt: name={{item}} state=installed
-  with_items:
-    - aptitude
-    - htop
-    - vim
-    - screen
-    - apt-transport-https
-    - silversearcher-ag
-    - keepass2
-    - xdotool
-    - vlc
-    - gparted
-    - meld
-    - ncdu
+  apt:
+    name:
+      - aptitude
+      - htop
+      - vim
+      - screen
+      - apt-transport-https
+      - silversearcher-ag
+      - keepass2
+      - xdotool
+      - vlc
+      - gparted
+      - meld
+      - ncdu
+    state: latest
   become: yes

@@ -4,6 +4,11 @@
 A playbook that automate the steps I take
 after the installation of my box.
 
+This is all very opinionated and changing with my mood :-)
+Infact - for the whole package I suppose I'm the only user, 
+but you can be interested on best-practices for installing some 
+of the sofware here.
+
 This will be a playground and a perennial
 work in progress, but feedback is appreciated.
 
@@ -23,11 +28,12 @@ work in progress, but feedback is appreciated.
 
 ### Usage
 
-* You need Python to run ansible
-* Install the requirements, via pip:
+On recent Ubuntu versions - the fastest way to get started
+is installing Ansible with APT:
 
-		pip install -r requirements.txt
-* Run Ansible:
+    sudo apt install ansible
+
+* And then run the script:
 
 		./run.sh
 		

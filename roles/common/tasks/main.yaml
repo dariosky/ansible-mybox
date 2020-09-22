@@ -13,13 +13,13 @@
   tags: [multimedia, design]
 - import_tasks: audio.yaml
   tags: [multimedia audio]
-- import_tasks: mongodb.yaml
-  tags: [db]
+#- import_tasks: mongodb.yaml
+#  tags: [db]
 - import_tasks: docker.yaml
   tags: [docker]
 - import_tasks: zsh.yaml
   tags: [shell]
-- import_tasks: bluetooth.yaml
-  tags: [system]
+#- import_tasks: bluetooth.yaml
+#  tags: [system]
 - import_tasks: various.yaml
   tags: [various]
