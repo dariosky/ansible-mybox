@@ -20,7 +20,7 @@
     - libxslt-dev
     - lib32z1
     - lib32z1-dev
-    - lib32ncurses5
+    - lib32ncurses6
     - libbz2-1.0:i386
     - libc6:i386
     - libstdc++6:i386
@@ -34,7 +34,7 @@
   become: yes
 
 - name: Development fonts (optional)
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   ignore_errors: True
   with_items:
     - fonts-firacode

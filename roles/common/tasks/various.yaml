@@ -1,5 +1,5 @@
 - name: Various useful apps
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   with_items:
     - terminator
     - dconf-editor
@@ -26,7 +26,7 @@
 #  become: yes
 #
 #- name: Typora package
-#  apt: name={{item}} state=installed
+#  apt: name={{item}} state=present
 #  with_items:
 #    - typora
 #  become: yes

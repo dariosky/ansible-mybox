@@ -14,7 +14,7 @@
   become: True
 
 - name: Install Google Chrome {{chrome_stage}}
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   with_items:
     - google-chrome-{{chrome_stage}}
   become: yes
