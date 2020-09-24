@@ -16,10 +16,10 @@ work in progress, but feedback is appreciated.
 
 * various Linux system tools
 * various development libraries and tools
-* Google Chrome beta
+* Google Chrome stable
 * Setup no-sudo password for current user
-* Design tools: Gimp, Inkscape, Gravit-designer
-* DB: MongoDB, postgresql, Redis
+* Design tools: Gimp, Inkscape
+* DB: postgresql, Redis
 * Social: Slack, Skype
 * Network: OpenSSH server
 * Docker

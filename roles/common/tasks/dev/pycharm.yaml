@@ -1,0 +1,3 @@
+- name: Pycharm (snap package)
+  shell:  snap install pycharm-professional --edge --classic
+  become: True

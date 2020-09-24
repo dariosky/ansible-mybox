@@ -8,7 +8,7 @@
   tags: [social]
 - import_tasks: networking.yaml
   tags: [network]
-- import_tasks: bin/main.yaml
+#- import_tasks: bin/main.yaml
 - import_tasks: design.yaml
   tags: [multimedia, design]
 - import_tasks: audio.yaml

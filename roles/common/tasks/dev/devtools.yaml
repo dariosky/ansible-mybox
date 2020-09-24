@@ -53,3 +53,5 @@
   tags: [editor]
 
 - import_tasks: postman.yaml
+
+- import_tasks: pycharm.yaml
