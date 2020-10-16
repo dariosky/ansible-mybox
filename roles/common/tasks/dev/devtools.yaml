@@ -26,6 +26,7 @@
     - libstdc++6:i386
     - libsqlite3-dev
     - libaio1
+    - libev-dev
 
     - fonts-firacode
 

@@ -11,4 +11,6 @@
     - nethogs
     - apache2-utils
     - curl
+    - sshuttle
+    - net-tools
   become: yes
